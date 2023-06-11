@@ -51,7 +51,7 @@ a {
 }
 
 .left-bar {
-    max-width: 41.66%;
+    width: 320px;
     box-shadow: 0px 0px 100px -20px #34495e;
 }
 
