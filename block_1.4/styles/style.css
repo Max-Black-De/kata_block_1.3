@@ -161,3 +161,9 @@ p{
     letter-spacing: -0.2px;
     color: #7E7E82;
 }
+
+a:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
