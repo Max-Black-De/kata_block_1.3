@@ -99,7 +99,9 @@ li {
     color: #1B1C21;
 }
 
-.menu-list .menu-list__element-1::before{
+.menu-list li:hover:before{
+    overflow: auto;
+    cursor: pointer;
     content: "";
     background-color: #41F6D7;
     display: flex;
@@ -108,7 +110,19 @@ li {
     width: 4px;
     height: 40px;
     border-radius: 0 12px 12px 0 / 0 10px 10px 0;
+    animation-name: hightlight;
+    animation-delay: 400ms;
+    animation-duration: 1.5s;  
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
 
+@keyframes hightlight {
+    0% {width: 4px;}
+    100% {width: 220px;}
+    0% {opacity: 1;}
+    100% {opacity: 0.5;}
 }
 
 .menu-block {
