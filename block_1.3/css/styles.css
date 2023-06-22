@@ -13,9 +13,9 @@
     /* Браузер сначала попробует найти шрифт локально */
     src: local("TT Lakes"),
         /* Если не получилось, загрузит woff */
-        url("/fonts/TTLakes-Medium.woff") format("woff"),
+        url("fonts/TTLakes-Medium.woff") format("woff"),
         /* Если браузер не поддерживает woff, загрузит ttf */
-        url("/fonts/TTLakes-Medium.ttf") format("ttf");
+        url("fonts/TTLakes-Medium.ttf") format("ttf");
 }
 @font-face {
     font-family: 'TT Lakes';
@@ -24,9 +24,9 @@
     /* Браузер сначала попробует найти шрифт локально */
     src: local("TT Lakes"),
         /* Если не получилось, загрузит woff */
-        url("/fonts/TTLakes-Regular.woff") format("woff"),
+        url("fonts/TTLakes-Regular.woff") format("woff"),
         /* Если браузер не поддерживает woff, загрузит ttf */
-        url("/fonts/TTLakes-Regular.ttf") format("ttf");
+        url("fonts/TTLakes-Regular.ttf") format("ttf");
 }
 @font-face {
     font-family: 'TT Lakes';
@@ -35,9 +35,9 @@
     /* Браузер сначала попробует найти шрифт локально */
     src: local("TT Lakes"),
         /* Если не получилось, загрузит woff */
-        url("/fonts/TTLakes-Bold.woff") format("woff"),
+        url("fonts/TTLakes-Bold.woff") format("woff"),
         /* Если браузер не поддерживает woff, загрузит ttf */
-        url("/fonts/TTLakes-Bold.ttf") format("ttf");
+        url("fonts/TTLakes-Bold.ttf") format("ttf");
 }
 
 
