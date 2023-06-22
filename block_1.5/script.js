@@ -12,4 +12,5 @@ new Swiper('.swiper', {
     autoHeight: false,
     slidesPerView: 1.25,
     centeredSlides: false,
+    slidesOffsetAfter: 64,
 })
