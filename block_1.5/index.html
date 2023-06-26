@@ -12,10 +12,13 @@
 <body class="body">
 
     <header class="header">
-        <h1 class="header__title">ремонт техники разных брендов</h1>
+        <div class="tittle-wrapper">
+            <h1 class="header__title">ремонт техники разных брендов</h1>
+        </div>
     </header>
 
     <main class="main-block">
+        <input type="checkbox" class="swiper__chckbox" name="checkbx" id="checkbx">
         <section class="swiper">
             <ul class="swiper-wrapper">
 
@@ -86,18 +89,14 @@
                 </li>
 
             </ul>
-            <div class="pagination-container">
+            <div class="pagination-container pagination-container--hidden">
                 <div class="swiper-pagination"></div>
             </div>
-
-            <!-- If we need navigation buttons -->
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
         </section>
+        <label tabindex="0" class="content-hider" for="checkbx"><img src="images/arrows.svg" alt="стрелки" class="arrows"></label>
     </main>
 
     <footer class="footer">
-        <!-- чё ты? -->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>

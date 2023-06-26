@@ -10,19 +10,11 @@ new Swiper('.swiper', {
         dynamicBullets: false,
     },
     slidesPerView: 'auto',
-    // breakpoints: {
-    //     320: {
-    //         slidesOffsetAfter: 64,
-    //     },
-    //     480: {
-    //         slidesOffsetAfter: -48,
-    //     },
-    //     640: {
-    //         slidesOffsetAfter: 128,
-    //     },
-    // },
     spaceBetween: 16,
-    // autoHeight: false,
-    // centeredSlides: false,
     slidesOffsetAfter: 64,
+    breakpoints: {
+        768: {
+            spaceBetween: 0
+        }
+    }
 })
