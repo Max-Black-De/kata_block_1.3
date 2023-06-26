@@ -50,7 +50,7 @@ html {
 /* mobile 320 x 234 */
 body {
     min-width: 320px;
-    max-width: 320px;
+    /* max-width: 320px; */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -77,7 +77,7 @@ h1 {
 }
 .swiper {
     position: relative;
-    margin: 0;
+    margin-left: 16px;
     padding: 0;
     height: 154px;
     display: flex;
@@ -99,9 +99,10 @@ h1 {
     border: 1px solid #EAEAEA;
     border-radius: 6px;
     height: 72px;
-    width: 240px !important;
+    min-width: 240px;
+    max-width: 240px;
     background: #ffffff;
-    margin: 16px 0 0 16px;
+    margin-top: 16px;
     display: flex;
     align-items: center;
     padding-left: 16px;
@@ -149,6 +150,8 @@ h1 {
 }
 
 /* планшет 768 x 322 */
-@media screen {
+@media only screen and (min-width: 768px){
+
+    
     
 }

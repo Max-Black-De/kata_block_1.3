@@ -9,8 +9,20 @@ new Swiper('.swiper', {
         clickable: true,
         dynamicBullets: false,
     },
-    autoHeight: false,
-    slidesPerView: 1.25,
-    centeredSlides: false,
+    slidesPerView: 'auto',
+    // breakpoints: {
+    //     320: {
+    //         slidesOffsetAfter: 64,
+    //     },
+    //     480: {
+    //         slidesOffsetAfter: -48,
+    //     },
+    //     640: {
+    //         slidesOffsetAfter: 128,
+    //     },
+    // },
+    spaceBetween: 16,
+    // autoHeight: false,
+    // centeredSlides: false,
     slidesOffsetAfter: 64,
 })
