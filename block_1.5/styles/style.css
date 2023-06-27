@@ -1,16 +1,16 @@
-
 html {
     list-style: none;
 }
 
 *,
 *:before,
-*:after{
+*:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
+
 @font-face {
     font-family: 'TT Lakes';
     font-weight: 500;
@@ -22,6 +22,7 @@ html {
         /* Если браузер не поддерживает woff, загрузит ttf */
         url("/font/TTLakes-Medium.ttf") format("ttf");
 }
+
 @font-face {
     font-family: 'TT Lakes';
     font-weight: normal;
@@ -33,6 +34,7 @@ html {
         /* Если браузер не поддерживает woff, загрузит ttf */
         url("/font/TTLakes-Regular.ttf") format("ttf");
 }
+
 @font-face {
     font-family: 'TT Lakes';
     font-weight: bold;
@@ -68,15 +70,27 @@ h1 {
     text-transform: uppercase;
     color: #7E7E82;
 }
+
 .tittle-wrapper {
     background: linear-gradient(to right, #F8F8F8, #ffffff);
     padding: 16px;
 }
-.swiper {
-    position: relative;
+
+.main-block {
     margin: 16px 0 0 16px;
-    padding: 0;
+}
+
+.swiper {
     max-height: 160px;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
 }
 
 .swiper::after {
@@ -84,51 +98,11 @@ h1 {
     right: 0px;
     top: 0px;
     content: "";
-    background: linear-gradient(-90deg,#FFFFFF, transparent);
+    background: linear-gradient(-90deg, #FFFFFF, transparent);
     height: 72px;
     width: 24px;
     z-index: 1;
 }
-
-/* Сворачивание - разворачивание лишнего текста */
-.swiper__chckbox {
-    opacity: 0;
-    position: absolute;
-}
-.content-hider {
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin: 16px 16px;
-    padding: 0 4px 0 0;
-    display: inline-flex;
-    align-items: center;
-}
-.swiper__chckbox:checked ~ .swiper {
-    max-height: none;
-}
-
-.swiper__chckbox ~ .content-hider::after {
-    content: "Показать всё";
-    font-family: 'TT Lakes';
-    font-weight: 500;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #1B1C21;
-}
-
-.swiper__chckbox:checked ~ .content-hider::after {
-    content: "Скрыть";
-    font-family: 'TT Lakes';
-    font-weight: 500;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #1B1C21;
-}
-
-
 
 .swiper-slide {
     box-sizing: border-box;
@@ -142,7 +116,7 @@ h1 {
     padding-left: 16px;
 }
 
-.link-icon::before {
+.image-wrapper::before {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -153,7 +127,8 @@ h1 {
     border: 1px solid #FF3E79;
     border-radius: 50%;
 }
-.link-icon::after{
+
+.image-wrapper::after {
     position: absolute;
     top: 31px;
     right: 34px;
@@ -166,9 +141,11 @@ h1 {
     border-radius: 20%;
     transform: rotate(45deg);
 }
-.pagination-container{
+
+.pagination-container {
     margin-top: 16px;
 }
+
 .swiper-pagination {
     position: static;
 }
@@ -176,8 +153,9 @@ h1 {
 .swiper-pagination-bullet-active {
     background-color: #979797;
 }
+
 .swiper-pagination-bullet {
-    /* background-color: #DDDDDD; */
+    background-color: #DDDDDD;
 }
 
 .footer {
@@ -185,26 +163,78 @@ h1 {
     height: auto;
 }
 
+/* Сворачивание - разворачивание лишнего текста */
+.main-block__checkbox:checked~.swiper {
+    max-height: none;
+}
+.main-block__checkbox~.content-hider-btn::after {
+    content: "Показать всё";
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1C21;
+}
+.main-block__checkbox:checked~.content-hider-btn::after {
+    content: "Скрыть";
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1C21;
+}
+
+
 /* планшет 768 x 322 */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
+    /* создание кнопки скрытия текста */
+    .content-hider-btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-top: 24px;
+        display: inline-flex;
+        align-items: center;
+    }
     .pagination-container--hidden {
         display: none;
     }
+
     .swiper::after {
         display: none;
     }
+
     .swiper-wrapper {
         flex-wrap: wrap;
     }
+
     .tittle-wrapper {
         padding-left: 24px
     }
-    .swiper {
+
+    .main-block {
         margin: 24px 0 0 24px;
     }
+
     .swiper-slide {
         margin: 0 24px 16px 0;
         max-width: 224px;
     }
-    
+}
+
+@media only screen and (min-width: 1120px) {
+    .tittle-wrapper {
+        padding-left: 32px
+    }
+
+    .main-block {
+        margin: 24px 0 0 32px;
+    }
+
+    .swiper-slide {
+        margin: 0 32px 16px 0;
+        max-width: 240px;
+    }
 }
